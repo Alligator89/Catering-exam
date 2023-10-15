@@ -1,10 +1,14 @@
 package com.exam.catering.controller;
 
+import com.exam.catering.domain.Client;
+import com.exam.catering.service.ClientService;
 import io.swagger.v3.oas.annotations.Parameter;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/client")

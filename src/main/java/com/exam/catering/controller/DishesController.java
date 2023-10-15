@@ -1,8 +1,12 @@
 package com.exam.catering.controller;
 
+import com.exam.catering.domain.Dishes;
+import com.exam.catering.service.DishService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/dishes")
@@ -15,8 +19,8 @@ public class DishesController {
     }
 
     @GetMapping("/list")
-    public ResponseEntity<List<Dish>> getList() {
-        List<Dish> dishList = dishService.getList();
+    public ResponseEntity<List<Dishes>> getList() {
+        List<Dishes> dishList = dishService.getList();
         if (dishList.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } else {
@@ -25,19 +29,19 @@ public class DishesController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Dish> getDish(@PathVariable Integer id) {
-        Dish dish = dishService.getDish(id).orElseThrow(DishNotFoundException::new);
+    public ResponseEntity<Dishes> getDish(@PathVariable Integer id) {
+        Dishes dish = dishService.getDish(id).orElseThrow(DishNotFoundException::new);
         return new ResponseEntity<>(dish, HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<HttpStatus> createDish(@RequestBody Dish dish) {
+    public ResponseEntity<HttpStatus> createDish(@RequestBody Dishes dish) {
         dishService.createDish(dish);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @PutMapping
-    public ResponseEntity<HttpStatus> updateDish(@RequestBody Dish dish) {
+    public ResponseEntity<HttpStatus> updateDish(@RequestBody Dishes dish) {
         dishService.updateDish(dish);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

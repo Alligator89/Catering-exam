@@ -2,6 +2,8 @@ package com.exam.catering.service;
 
 import com.exam.catering.domain.Client;
 import com.exam.catering.domain.Orders;
+import com.exam.catering.repository.ClientRepository;
+import com.exam.catering.repository.OrdersRepository;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 

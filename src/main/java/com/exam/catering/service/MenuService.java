@@ -1,6 +1,7 @@
 package com.exam.catering.service;
 
 import com.exam.catering.domain.Menu;
+import com.exam.catering.repository.DishRepository;
 import org.springframework.stereotype.Service;
 
 @Service
