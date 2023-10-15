@@ -8,6 +8,8 @@ import com.exam.catering.security.domain.AuthRequest;
 import com.exam.catering.security.domain.RegistrationDTO;
 import com.exam.catering.security.domain.SecurityCredentials;
 import com.exam.catering.security.repository.SecurityCredentialsRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,7 @@ import java.util.Optional;
 @Service
 @Component
 public class SecurityService {
+    private static final Logger log = LoggerFactory.getLogger(SecurityService.class);
 
     private final JwtUtils jwtUtils;
 
@@ -43,13 +46,15 @@ public class SecurityService {
     public String generateToken(AuthRequest authRequest) {
         Optional<SecurityCredentials> credentials = securityCredentialsRepository.findByClientLogin(authRequest.getLogin());
         if (credentials.isPresent() && passwordEncoder.matches(authRequest.getPassword(), credentials.get().getClientPassword())) {
+            log.info("Token is successfully generated!");
             return jwtUtils.generateJwtToken(authRequest.getLogin());
         }
+        log.info("Token is not generated!");
         return "";
     }
 
     @Transactional(rollbackFor = Exception.class)
-    public void registration(RegistrationDTO registrationDTO) {
+    public void registration (RegistrationDTO registrationDTO) {
         client.setFirstName(registrationDTO.getFirstName());
         client.setLastName(registrationDTO.getLastName());
         client.setEmailAddress(registrationDTO.getEmailAddress());

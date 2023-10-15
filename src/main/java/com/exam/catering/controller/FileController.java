@@ -1,6 +1,8 @@
 package com.exam.catering.controller;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpHeaders;
@@ -22,6 +24,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/file")
 @SecurityRequirement(name = "Bearer Authentication")
 public class FileController {
+    private static final Logger log = LoggerFactory.getLogger(FileController.class);
 
     private final Path ROOT_FILE_PATH = Paths.get("data");
 
@@ -29,8 +32,10 @@ public class FileController {
     public ResponseEntity<HttpStatus> upload(@RequestParam("file") MultipartFile file) {
         try {
             Files.copy(file.getInputStream(), this.ROOT_FILE_PATH.resolve(file.getOriginalFilename()));
+            log.info("File with name " + file.getName() + " is uploaded!");
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (IOException e) {
+            log.info("Invalid uploading file " + file.getName() + "!");
         }
         return new ResponseEntity<>(HttpStatus.CONFLICT);
     }
@@ -49,6 +54,7 @@ public class FileController {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+        log.info("File with name " + filename + " is not found!");
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
@@ -63,6 +69,7 @@ public class FileController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        log.info("List of files is not found!");
         return new ResponseEntity<>(new ArrayList<>(), HttpStatus.CONFLICT);
     }
 
@@ -72,8 +79,10 @@ public class FileController {
 
         File file = new File(path.toString());
         if (file.delete()) {
+            log.info("File with name " + filename + " is deleted!");
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
+        log.info("File with name " + filename + " is not deleted!");
         return new ResponseEntity<>(HttpStatus.CONFLICT);
     }
 }
