@@ -3,6 +3,9 @@ package com.exam.catering.controller;
 import com.exam.catering.domain.Orders;
 import com.exam.catering.exceptions.OrderNotFoundException;
 import com.exam.catering.service.OrdersService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +27,11 @@ public class OrderController {
         this.ordersService = ordersService;
     }
 
+    @Operation(summary = "Get list of orders")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "List of orders is found"),
+            @ApiResponse(responseCode = "404", description = "List of orders is not found"),
+            @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @GetMapping("/list")
     public ResponseEntity<List<Orders>> getAllOrders() {
         List<Orders> orders = ordersService.getOrders();
@@ -36,6 +44,11 @@ public class OrderController {
         }
     }
 
+    @Operation(summary = "Get order", description = "Get one order , need to pass the input parameter order`s id")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Order is found"),
+            @ApiResponse(responseCode = "404", description = "Order is not found"),
+            @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @GetMapping("/{id}")
     public ResponseEntity<Orders> getOrder(@PathVariable Integer id) {
         Orders order = ordersService.getOrder(id).orElseThrow(OrderNotFoundException::new);
@@ -43,6 +56,11 @@ public class OrderController {
         return new ResponseEntity<>(order, HttpStatus.OK);
     }
 
+    @Operation(summary = "Creating order", description = "Create order,  need to pass object Orders in format JSON")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "Order is created"),
+            @ApiResponse(responseCode = "409", description = "Order is not created"),
+            @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @PostMapping
     public ResponseEntity<HttpStatus> createOrder(@RequestBody Orders order) {
         ordersService.createOrder(order);
@@ -50,6 +68,11 @@ public class OrderController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
+    @Operation(summary = "Updating order", description = "Update order, need to pass object Orders in format JSON")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "Order is updates"),
+            @ApiResponse(responseCode = "409", description = "Order is not updated"),
+            @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @PutMapping
     public ResponseEntity<HttpStatus> updateOrder(@RequestBody Orders order) {
         ordersService.updateOrder(order);
@@ -57,6 +80,11 @@ public class OrderController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @Operation(summary = "Deleting order", description = "Delete order,  need to pass the input parameter order`s id")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "Order is deleted"),
+            @ApiResponse(responseCode = "409", description = "Order is not deleted"),
+            @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteOrder(@PathVariable Integer id) {
         ordersService.deleteOrderById(id);

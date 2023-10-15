@@ -1,0 +1,128 @@
+2023-10-15T14:15:39.474+03:00  INFO 18116 --- [main] c.e.c.CateringExamProjectApplication     : Starting CateringExamProjectApplication using Java 17.0.8 with PID 18116 (D:\Программы\My first project\Catering exam project\target\classes started by User in D:\Программы\My first project\Catering exam project)
+2023-10-15T14:15:39.478+03:00  INFO 18116 --- [main] c.e.c.CateringExamProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-10-15T14:15:40.313+03:00  INFO 18116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-15T14:15:40.361+03:00  INFO 18116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 5 JPA repository interfaces.
+2023-10-15T14:15:40.764+03:00  INFO 18116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-15T14:15:40.772+03:00  INFO 18116 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-15T14:15:40.773+03:00  INFO 18116 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-15T14:15:40.843+03:00  INFO 18116 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-15T14:15:40.844+03:00  INFO 18116 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1317 ms
+2023-10-15T14:15:40.992+03:00  INFO 18116 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-10-15T14:15:40.993+03:00  INFO 18116 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-10-15T14:15:40.993+03:00  INFO 18116 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-10-15T14:15:41.002+03:00  INFO 18116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-15T14:15:41.173+03:00  INFO 18116 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@44aa91e2
+2023-10-15T14:15:41.175+03:00  INFO 18116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-15T14:15:41.197+03:00  INFO 18116 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/Catering (PostgreSQL 15.2)
+2023-10-15T14:15:41.258+03:00  INFO 18116 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.032s)
+2023-10-15T14:15:41.307+03:00  INFO 18116 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 2.1.0
+2023-10-15T14:15:41.308+03:00  INFO 18116 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-10-15T14:15:41.357+03:00  INFO 18116 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-15T14:15:41.393+03:00  INFO 18116 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-15T14:15:41.396+03:00  INFO 18116 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-15T14:15:41.496+03:00  INFO 18116 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-15T14:15:41.582+03:00  INFO 18116 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-15T14:15:41.823+03:00  INFO 18116 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-15T14:15:42.391+03:00  INFO 18116 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-15T14:15:42.395+03:00  INFO 18116 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-15T14:15:42.855+03:00  WARN 18116 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-15T14:15:43.116+03:00  INFO 18116 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-10-15T14:15:43.141+03:00  INFO 18116 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@35bcf3a6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1adc38a0, org.springframework.security.web.context.SecurityContextHolderFilter@59e24c62, org.springframework.security.web.header.HeaderWriterFilter@7200702, org.springframework.security.web.authentication.logout.LogoutFilter@4ac1544f, com.exam.catering.security.filter.JwtAuthenticationFilter@76b6bad3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@744c16fb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77e42cbf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b5df8b7, org.springframework.security.web.session.SessionManagementFilter@11e36e5c, org.springframework.security.web.access.ExceptionTranslationFilter@3095c449, org.springframework.security.web.access.intercept.AuthorizationFilter@7b1a9ab3]
+2023-10-15T14:15:43.323+03:00  WARN 18116 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/v3/api-docs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-10-15T14:15:43.324+03:00  INFO 18116 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/v3/api-docs/**']
+2023-10-15T14:15:43.324+03:00  WARN 18116 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/swagger-ui/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-10-15T14:15:43.324+03:00  INFO 18116 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/swagger-ui/**']
+2023-10-15T14:15:43.383+03:00  WARN 18116 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-10-15T14:15:43.386+03:00  INFO 18116 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-15T14:15:43.389+03:00  INFO 18116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-15T14:15:43.393+03:00  INFO 18116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-15T14:15:43.395+03:00  INFO 18116 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-15T14:15:43.413+03:00  INFO 18116 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-15T14:15:43.425+03:00 ERROR 18116 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-10-15T14:16:34.364+03:00  INFO 10816 --- [main] c.e.c.CateringExamProjectApplication     : Starting CateringExamProjectApplication using Java 17.0.8 with PID 10816 (D:\Программы\My first project\Catering exam project\target\classes started by User in D:\Программы\My first project\Catering exam project)
+2023-10-15T14:16:34.366+03:00  INFO 10816 --- [main] c.e.c.CateringExamProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-10-15T14:16:35.068+03:00  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-15T14:16:35.119+03:00  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 5 JPA repository interfaces.
+2023-10-15T14:16:35.489+03:00  INFO 10816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-15T14:16:35.498+03:00  INFO 10816 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-15T14:16:35.498+03:00  INFO 10816 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-15T14:16:35.588+03:00  INFO 10816 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-15T14:16:35.589+03:00  INFO 10816 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1182 ms
+2023-10-15T14:16:35.761+03:00  INFO 10816 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-10-15T14:16:35.761+03:00  INFO 10816 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-10-15T14:16:35.761+03:00  INFO 10816 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-10-15T14:16:35.767+03:00  INFO 10816 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-15T14:16:35.909+03:00  INFO 10816 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5bb2fb2b
+2023-10-15T14:16:35.910+03:00  INFO 10816 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-15T14:16:35.921+03:00  INFO 10816 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/Catering (PostgreSQL 15.2)
+2023-10-15T14:16:35.954+03:00  INFO 10816 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.019s)
+2023-10-15T14:16:36.012+03:00  INFO 10816 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 2.1.0
+2023-10-15T14:16:36.013+03:00  INFO 10816 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-10-15T14:16:36.076+03:00  INFO 10816 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-15T14:16:36.110+03:00  INFO 10816 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-15T14:16:36.112+03:00  INFO 10816 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-15T14:16:36.211+03:00  INFO 10816 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-15T14:16:36.308+03:00  INFO 10816 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-15T14:16:36.532+03:00  INFO 10816 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-15T14:16:37.065+03:00  INFO 10816 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-15T14:16:37.067+03:00  INFO 10816 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-15T14:16:37.459+03:00  WARN 10816 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-15T14:16:37.735+03:00  INFO 10816 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-10-15T14:16:37.760+03:00  INFO 10816 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@577b2c5f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71eb4ea4, org.springframework.security.web.context.SecurityContextHolderFilter@68312b85, org.springframework.security.web.header.HeaderWriterFilter@638b05fb, org.springframework.security.web.authentication.logout.LogoutFilter@1b5df8b7, com.exam.catering.security.filter.JwtAuthenticationFilter@1d208795, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c6ee543, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@628af295, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2456716b, org.springframework.security.web.session.SessionManagementFilter@5db6083b, org.springframework.security.web.access.ExceptionTranslationFilter@31e5d408, org.springframework.security.web.access.intercept.AuthorizationFilter@26401eda]
+2023-10-15T14:16:37.943+03:00  WARN 10816 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/v3/api-docs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-10-15T14:16:37.944+03:00  INFO 10816 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/v3/api-docs/**']
+2023-10-15T14:16:37.944+03:00  WARN 10816 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/swagger-ui/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-10-15T14:16:37.944+03:00  INFO 10816 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/swagger-ui/**']
+2023-10-15T14:16:38.016+03:00  INFO 10816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-15T14:16:38.027+03:00  INFO 10816 --- [main] c.e.c.CateringExamProjectApplication     : Started CateringExamProjectApplication in 4.004 seconds (process running for 4.452)
+2023-10-15T14:16:38.307+03:00  INFO 10816 --- [RMI TCP Connection(3)-192.168.100.2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-15T14:16:38.308+03:00  INFO 10816 --- [RMI TCP Connection(3)-192.168.100.2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-15T14:16:38.309+03:00  INFO 10816 --- [RMI TCP Connection(3)-192.168.100.2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-15T14:17:51.668+03:00  INFO 15172 --- [main] .e.c.CateringExamProjectApplicationTests : Starting CateringExamProjectApplicationTests using Java 17.0.8 with PID 15172 (started by User in D:\���������\My first project\Catering exam project)
+2023-10-15T14:17:51.671+03:00  INFO 15172 --- [main] .e.c.CateringExamProjectApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2023-10-15T14:17:52.715+03:00  INFO 15172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-15T14:17:52.776+03:00  INFO 15172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 5 JPA repository interfaces.
+2023-10-15T14:17:53.317+03:00  INFO 15172 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-10-15T14:17:53.317+03:00  INFO 15172 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-10-15T14:17:53.317+03:00  INFO 15172 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-10-15T14:17:53.326+03:00  INFO 15172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-15T14:17:53.666+03:00  INFO 15172 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@781dbe44
+2023-10-15T14:17:53.668+03:00  INFO 15172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-15T14:17:53.681+03:00  INFO 15172 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/Catering (PostgreSQL 15.2)
+2023-10-15T14:17:53.717+03:00  INFO 15172 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.020s)
+2023-10-15T14:17:53.784+03:00  INFO 15172 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 2.1.0
+2023-10-15T14:17:53.785+03:00  INFO 15172 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-10-15T14:17:53.875+03:00  INFO 15172 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-15T14:17:53.949+03:00  INFO 15172 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-15T14:17:53.953+03:00  INFO 15172 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-15T14:17:54.095+03:00  INFO 15172 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-15T14:17:54.230+03:00  INFO 15172 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-15T14:17:54.560+03:00  INFO 15172 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-15T14:17:55.302+03:00  INFO 15172 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-15T14:17:55.306+03:00  INFO 15172 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-15T14:17:55.864+03:00  WARN 15172 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-15T14:17:56.023+03:00  INFO 15172 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18876fa9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a110e7d, org.springframework.security.web.context.SecurityContextHolderFilter@52288c65, org.springframework.security.web.header.HeaderWriterFilter@7f219e84, org.springframework.security.web.authentication.logout.LogoutFilter@66c88fce, com.exam.catering.security.filter.JwtAuthenticationFilter@10c1682b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d18401b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d3a56ea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b3cbc0e, org.springframework.security.web.session.SessionManagementFilter@352a8183, org.springframework.security.web.access.ExceptionTranslationFilter@1b1d1558, org.springframework.security.web.access.intercept.AuthorizationFilter@5f63a6f2]
+2023-10-15T14:17:56.695+03:00  WARN 15172 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/v3/api-docs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-10-15T14:17:56.696+03:00  INFO 15172 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/v3/api-docs/**']
+2023-10-15T14:17:56.696+03:00  WARN 15172 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/swagger-ui/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-10-15T14:17:56.696+03:00  INFO 15172 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/swagger-ui/**']
+2023-10-15T14:17:56.721+03:00  INFO 15172 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-10-15T14:17:56.790+03:00  INFO 15172 --- [main] .e.c.CateringExamProjectApplicationTests : Started CateringExamProjectApplicationTests in 5.424 seconds (process running for 6.423)
+2023-10-15T14:17:57.426+03:00  INFO 15172 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-15T14:17:57.429+03:00  INFO 15172 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-15T14:17:57.433+03:00  INFO 15172 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

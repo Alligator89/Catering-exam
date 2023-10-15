@@ -2,6 +2,9 @@ package com.exam.catering.controller;
 
 import com.exam.catering.domain.Menu;
 import com.exam.catering.service.MenuService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,6 +26,11 @@ public class MenuController {
         this.menuService = menuService;
     }
 
+    @Operation(summary = "Get menu")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Menu is found"),
+            @ApiResponse(responseCode = "404", description = "Menu is not found"),
+            @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @GetMapping
     public ResponseEntity<Menu> getMenuList() {
         Menu menu = menuService.getMenu();

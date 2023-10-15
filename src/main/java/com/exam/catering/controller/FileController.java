@@ -1,5 +1,8 @@
 package com.exam.catering.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +31,12 @@ public class FileController {
 
     private final Path ROOT_FILE_PATH = Paths.get("data");
 
+    @Operation(summary = "Uploading file")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "File is uploaded"),
+            @ApiResponse(responseCode = "404", description = "File is not uploaded"),
+            @ApiResponse(responseCode = "403", description = "No rights to the content"),
+            @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @PostMapping("/upload")
     public ResponseEntity<HttpStatus> upload(@RequestParam("file") MultipartFile file) {
         try {
@@ -40,6 +49,11 @@ public class FileController {
         return new ResponseEntity<>(HttpStatus.CONFLICT);
     }
 
+    @Operation(summary = "Get file", description = "Get one file, need to pass the input parameter file`s name")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "File is found"),
+            @ApiResponse(responseCode = "404", description = "File is not found"),
+            @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @GetMapping("/{filename}")
     public ResponseEntity<Resource> getFile(@PathVariable String filename) {
         Path path = ROOT_FILE_PATH.resolve(filename);
@@ -58,6 +72,11 @@ public class FileController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    @Operation(summary = "Get list of files")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "List of files is found"),
+            @ApiResponse(responseCode = "404", description = "List of files is not found"),
+            @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @GetMapping("/list")
     public ResponseEntity<ArrayList<String>> getFiles() {
         try {
@@ -73,6 +92,12 @@ public class FileController {
         return new ResponseEntity<>(new ArrayList<>(), HttpStatus.CONFLICT);
     }
 
+    @Operation(summary = "Deleting file", description = "Delete file, need to pass the input parameter file`s name")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "File is deleted"),
+            @ApiResponse(responseCode = "409", description = "File is not deleted"),
+            @ApiResponse(responseCode = "403", description = "No rights to the content"),
+            @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @DeleteMapping("/{filename}")
     public ResponseEntity<HttpStatus> deleteFile(@PathVariable String filename) {
         Path path = ROOT_FILE_PATH.resolve(filename);
