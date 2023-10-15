@@ -1,6 +1,9 @@
 package com.exam.catering.service;
 
 import com.exam.catering.domain.*;
+import com.exam.catering.exceptions.DishNotFoundException;
+import com.exam.catering.exceptions.OrderNotFoundException;
+import com.exam.catering.exceptions.OrderedMenuNotFoundException;
 import com.exam.catering.repository.DishRepository;
 import com.exam.catering.repository.OrderedMenuRepository;
 import com.exam.catering.repository.OrdersRepository;

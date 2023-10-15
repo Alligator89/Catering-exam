@@ -1,6 +1,7 @@
 package com.exam.catering.controller;
 
 import com.exam.catering.domain.Dishes;
+import com.exam.catering.exceptions.DishNotFoundException;
 import com.exam.catering.service.DishService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

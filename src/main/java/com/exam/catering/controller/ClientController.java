@@ -1,6 +1,7 @@
 package com.exam.catering.controller;
 
 import com.exam.catering.domain.Client;
+import com.exam.catering.exceptions.ClientNotFoundException;
 import com.exam.catering.service.ClientService;
 import io.swagger.v3.oas.annotations.Parameter;
 
