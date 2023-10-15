@@ -1,5 +1,6 @@
 package com.exam.catering.controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpHeaders;
@@ -19,6 +20,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/file")
+@SecurityRequirement(name = "Bearer Authentication")
 public class FileController {
 
     private final Path ROOT_FILE_PATH = Paths.get("data");

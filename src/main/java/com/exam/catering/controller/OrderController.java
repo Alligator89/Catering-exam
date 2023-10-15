@@ -3,6 +3,7 @@ package com.exam.catering.controller;
 import com.exam.catering.domain.Orders;
 import com.exam.catering.exceptions.OrderNotFoundException;
 import com.exam.catering.service.OrdersService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/orders")
+@SecurityRequirement(name = "Bearer Authentication")
 public class OrderController {
 
     private final OrdersService ordersService;

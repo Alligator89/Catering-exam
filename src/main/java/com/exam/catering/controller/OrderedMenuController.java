@@ -5,12 +5,14 @@ import com.exam.catering.domain.OrderedMenu;
 import com.exam.catering.domain.UpdateOrderedMenuDTO;
 import com.exam.catering.exceptions.OrderedMenuNotFoundException;
 import com.exam.catering.service.OrderedMenuService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/orderedMenu")
+@SecurityRequirement(name = "Bearer Authentication")
 public class OrderedMenuController {
 
     private final OrderedMenuService orderedMenuService;
