@@ -13,4 +13,12 @@ public class OrderedMenu {
 
     private Orders orders;
 
+    public void addDishes(Dishes dishes) {
+        this.dishes.add(dishes);
+    }
+
+    public void clearOrderedMenu() {
+        dishes.clear();
+    }
+
 }

@@ -3,6 +3,7 @@ package com.exam.catering.security.service;
 import com.exam.catering.domain.Client;
 import com.exam.catering.domain.Role;
 import com.exam.catering.repository.ClientRepository;
+import com.exam.catering.security.JwtUtils;
 import com.exam.catering.security.domain.AuthRequest;
 import com.exam.catering.security.domain.RegistrationDTO;
 import com.exam.catering.security.domain.SecurityCredentials;

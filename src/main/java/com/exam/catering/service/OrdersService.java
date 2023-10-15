@@ -7,6 +7,8 @@ import com.exam.catering.exceptions.ListOfOrdersNotFoundException;
 import com.exam.catering.exceptions.OrderNotFoundException;
 import com.exam.catering.repository.ClientRepository;
 import com.exam.catering.repository.OrdersRepository;
+import com.exam.catering.security.domain.SecurityCredentials;
+import com.exam.catering.security.repository.SecurityCredentialsRepository;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
