@@ -6,6 +6,7 @@ import com.exam.catering.service.DishService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -60,7 +61,7 @@ public class DishesController {
             @ApiResponse(responseCode = "409", description = "Dish is not created"),
             @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @PostMapping
-    public ResponseEntity<HttpStatus> createDish(@RequestBody Dishes dish) {
+    public ResponseEntity<HttpStatus> createDish(@Valid @RequestBody Dishes dish) {
         dishService.createDish(dish);
         log.info("Dish with name: " + dish.getName() + " is created!");
         return new ResponseEntity<>(HttpStatus.CREATED);
@@ -72,7 +73,7 @@ public class DishesController {
             @ApiResponse(responseCode = "409", description = "Dish is not updated"),
             @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @PutMapping
-    public ResponseEntity<HttpStatus> updateDish(@RequestBody Dishes dish) {
+    public ResponseEntity<HttpStatus> updateDish(@Valid @RequestBody Dishes dish) {
         dishService.updateDish(dish);
         log.info("Dish with id: " + dish.getId() + " is updated!");
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

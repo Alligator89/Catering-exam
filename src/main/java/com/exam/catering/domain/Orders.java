@@ -37,10 +37,10 @@ public class Orders {
 
     @Positive
     @Column(name = "general_cost", nullable = false)
-    private Long generalCost = 0L;
+    private Long generalCost;
 
     @Column(name = "flag_is_paid", nullable = false)
-    private Boolean isPaid = true;
+    private Boolean isPaid = false;
 
     @ManyToOne
     @JoinColumn(name = "client_id")
@@ -52,12 +52,19 @@ public class Orders {
     @JsonManagedReference(value = "orderedMenu-orders")
     private List<OrderedMenu> orderedMenu;
 
-    public void addOrderedMenu(OrderedMenu orderedMenu) {
-        this.orderedMenu.add(orderedMenu);
+    public void setPaid(Boolean paid) {
+        isPaid = paid;
     }
 
-    public void updateOrderedMenu(OrderedMenu orderedMenu) {
-        this.orderedMenu.add(orderedMenu);
+    public void payOrder(){
+        isPaid = true;
     }
 
+//     public void addOrderedMenu(OrderedMenu orderedMenu) {
+//        this.orderedMenu.add(orderedMenu);
+//    }
+//
+//    public void updateOrderedMenu(OrderedMenu orderedMenu) {
+//        this.orderedMenu.add(orderedMenu);
+//    }
 }

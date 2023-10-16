@@ -61,6 +61,7 @@ public class OrdersService {
         order.setReservedDate(order.getReservedDate());
         order.setCountOfPerson(order.getCountOfPerson());
         order.setGeneralCost(order.getGeneralCost());
+        order.setIsPaid(order.getIsPaid());
         String login = SecurityContextHolder.getContext().getAuthentication().getName();
         Optional<SecurityCredentials> clientLogin = securityCredentialsRepository.findByClientLogin(login);
         if (clientLogin.isEmpty()) {
@@ -71,12 +72,26 @@ public class OrdersService {
         ordersRepository.save(order);
     }
 
+    public void paymentOrder(Integer id) {
+        Optional<Orders> order = ordersRepository.findById(id);
+        if (order.isEmpty()) {
+            throw new OrderNotFoundException();
+        }
+        Orders orderSaved = order.get();
+        orderSaved.payOrder();
+        if (orderSaved.getIsPaid()) {
+        orderSaved.setPaid(Boolean.FALSE);
+        }
+        ordersRepository.save(orderSaved);
+    }
+
     public void updateOrder(Orders order) {
         order.setId(order.getId());
         order.setEvent(order.getEvent());
         order.setReservedDate(order.getReservedDate());
         order.setCountOfPerson(order.getCountOfPerson());
         order.setGeneralCost(order.getGeneralCost());
+        order.setIsPaid(order.getIsPaid());
         String login = SecurityContextHolder.getContext().getAuthentication().getName();
         Optional<SecurityCredentials> clientLogin = securityCredentialsRepository.findByClientLogin(login);
         if (clientLogin.isEmpty()) {

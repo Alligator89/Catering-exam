@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -77,7 +78,7 @@ public class ClientController {
             @ApiResponse(responseCode = "409", description = "Client is not created"),
             @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @PostMapping
-    public ResponseEntity<HttpStatus> createClient(@RequestBody Client client) {
+    public ResponseEntity<HttpStatus> createClient(@Valid @RequestBody Client client) {
         clientService.createClient(client);
         log.info("Client with firstname " + client.getFirstName() + " is created!");
         return new ResponseEntity<>(HttpStatus.CREATED);
@@ -89,7 +90,7 @@ public class ClientController {
             @ApiResponse(responseCode = "409", description = "Client is not updated"),
             @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @PutMapping
-    public ResponseEntity<HttpStatus> updateClient(@RequestBody Client client) {
+    public ResponseEntity<HttpStatus> updateClient(@Valid @RequestBody Client client) {
         clientService.updateClient(client);
         log.info("Client with id: " + client.getId() + " is updated!");
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
