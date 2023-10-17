@@ -63,6 +63,7 @@ public class FileController {
             if (resource.exists() || resource.isReadable()) {
                 HttpHeaders headers = new HttpHeaders();
                 headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"");
+                log.info("File with name " + filename + " is found");
                 return new ResponseEntity<>(resource, headers, HttpStatus.OK);
             }
         } catch (MalformedURLException e) {

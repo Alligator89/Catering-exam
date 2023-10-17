@@ -7,7 +7,6 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
-import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -63,13 +62,13 @@ public class OrderController {
             @ApiResponse(responseCode = "409", description = "Order is not created"),
             @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @PostMapping
-    public ResponseEntity<HttpStatus> createOrder(@Valid @RequestBody Orders order) {
+    public ResponseEntity<HttpStatus> createOrder(@RequestBody Orders order) {
         ordersService.createOrder(order);
-        log.info("Order with client`s id: " + order.getClient().getId() + " is created!");
+        log.info("Order with id: " + order.getId() + " is created!");
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @Operation(summary = "Payment order", description = "Payment order, need to pass order`s id")
+    @Operation(summary = "Payment order", description = "Pay order, need to pass order`s id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Order is paid"),
             @ApiResponse(responseCode = "409", description = "Order is not paid"),
@@ -77,7 +76,7 @@ public class OrderController {
     @PostMapping("/payment/{id}")
     public ResponseEntity<HttpStatus> paymentOrder(@PathVariable Integer id) {
         ordersService.paymentOrder(id);
-        log.info("Order by id: " + id + " is paid!");
+        log.info("Order with id: " + id + " is paid!");
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
@@ -87,7 +86,7 @@ public class OrderController {
             @ApiResponse(responseCode = "409", description = "Order is not updated"),
             @ApiResponse(responseCode = "500", description = "Internal server error"),})
     @PutMapping
-    public ResponseEntity<HttpStatus> updateOrder(@Valid @RequestBody Orders order) {
+    public ResponseEntity<HttpStatus> updateOrder(@RequestBody Orders order) {
         ordersService.updateOrder(order);
         log.info("Order with id: " + order.getId() + " is updated!");
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

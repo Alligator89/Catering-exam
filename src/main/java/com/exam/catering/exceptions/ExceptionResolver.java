@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ExceptionResolver {
     private static final Logger log = LoggerFactory.getLogger(ExceptionResolver.class);
 
-
     @ExceptionHandler(value = ClientNotFoundException.class)
     public ResponseEntity<HttpStatus> clientNotFoundException() {
         log.info("ClientNotFoundException exception!");
@@ -57,6 +56,12 @@ public class ExceptionResolver {
     @ExceptionHandler(value = OptimisticLockingFailureException.class)
     public ResponseEntity<HttpStatus> optimisticLockingFailureException() {
         log.info("OptimisticLockingFailureException exception!");
+        return new ResponseEntity<>(HttpStatus.CONFLICT);
+    }
+
+    @ExceptionHandler(value = OrderIsAlreadyPaidException.class)
+    public ResponseEntity<HttpStatus> orderIsAlreadyPaidException() {
+        log.info("OrderIsAlreadyPaidException exception!");
         return new ResponseEntity<>(HttpStatus.CONFLICT);
     }
 }

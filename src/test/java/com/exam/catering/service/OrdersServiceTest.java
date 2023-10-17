@@ -34,16 +34,12 @@ public class OrdersServiceTest {
     private static final String NAME = "Дима";
 
     private static final Integer ID_CLIENT = 4;
-
     @InjectMocks
     private OrdersService ordersService;
-
     @Mock
     private OrdersRepository ordersRepository;
-
     @Mock
     private SecurityCredentialsRepository securityCredentialsRepository;
-
     @Mock
     private ClientRepository clientRepository;
 

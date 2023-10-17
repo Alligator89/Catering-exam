@@ -21,15 +21,15 @@ public class DishRepositoryTest {
 
     static Dishes dish = new Dishes();
 
-    private static final Integer ID_VALUE = 25;
+    private static final Integer ID_VALUE = 70;
 
     @BeforeAll
     static void beforeAll() {
         dish.setId(ID_VALUE);
-        dish.setName("Жульен");
-        dish.setWeight(1L);
-        dish.setCost(5L);
-        dish.setTypeOfDish(TypeOfDish.COLD_SNACKS);
+        dish.setName("Лобио");
+        dish.setWeight(15L);
+        dish.setCost(23L);
+        dish.setTypeOfDish(TypeOfDish.SIDE_DISHES);
     }
 
     @Test
@@ -57,9 +57,9 @@ public class DishRepositoryTest {
     @Test
     void updateTest() {
         Dishes dishSaved = dishRepository.save(dish);
-        dishSaved.setName("Жульен");
+        dishSaved.setName("Антипасто");
         Dishes dishUpdated = dishRepository.saveAndFlush(dishSaved);
-        Assertions.assertEquals(dishUpdated.getName(), "Жульен");
+        Assertions.assertEquals(dishUpdated.getName(), "Антипасто");
     }
 
     @Test

@@ -15,9 +15,9 @@ class CateringExamProjectApplicationTests {
     @Autowired
     ClientController clientController;
 
-        @Test
-        void contextLoads() {
-            Assertions.assertThat(clientController).isNotNull();
-        }
+    @Test
+    void contextLoads() {
+        Assertions.assertThat(clientController).isNotNull();
     }
+}
 

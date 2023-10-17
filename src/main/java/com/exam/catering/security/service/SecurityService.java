@@ -54,7 +54,7 @@ public class SecurityService {
     }
 
     @Transactional(rollbackFor = Exception.class)
-    public void registration (RegistrationDTO registrationDTO) {
+    public void registration(RegistrationDTO registrationDTO) {
         client.setFirstName(registrationDTO.getFirstName());
         client.setLastName(registrationDTO.getLastName());
         client.setEmailAddress(registrationDTO.getEmailAddress());

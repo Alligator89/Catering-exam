@@ -4,6 +4,7 @@ import com.exam.catering.domain.Client;
 import com.exam.catering.domain.Orders;
 import com.exam.catering.exceptions.ClientNotFoundException;
 import com.exam.catering.exceptions.ListOfOrdersNotFoundException;
+import com.exam.catering.exceptions.OrderIsAlreadyPaidException;
 import com.exam.catering.exceptions.OrderNotFoundException;
 import com.exam.catering.repository.ClientRepository;
 import com.exam.catering.repository.OrdersRepository;
@@ -78,10 +79,10 @@ public class OrdersService {
             throw new OrderNotFoundException();
         }
         Orders orderSaved = order.get();
-        orderSaved.payOrder();
-        if (orderSaved.getIsPaid()) {
-        orderSaved.setPaid(Boolean.FALSE);
+        if (orderSaved.getIsPaid().equals(Boolean.TRUE)) {
+            throw new OrderIsAlreadyPaidException();
         }
+        orderSaved.payOrder();
         ordersRepository.save(orderSaved);
     }
 

@@ -47,24 +47,11 @@ public class Orders {
     @JsonBackReference
     private Client client;
 
-
     @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
     @JsonManagedReference(value = "orderedMenu-orders")
     private List<OrderedMenu> orderedMenu;
 
-    public void setPaid(Boolean paid) {
-        isPaid = paid;
-    }
-
-    public void payOrder(){
+    public void payOrder() {
         isPaid = true;
     }
-
-//     public void addOrderedMenu(OrderedMenu orderedMenu) {
-//        this.orderedMenu.add(orderedMenu);
-//    }
-//
-//    public void updateOrderedMenu(OrderedMenu orderedMenu) {
-//        this.orderedMenu.add(orderedMenu);
-//    }
 }

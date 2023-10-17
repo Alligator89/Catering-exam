@@ -44,13 +44,15 @@ public class DishesControllerTest {
     @MockBean
     DishService dishService;
 
-     static List<Dishes> dishList = new ArrayList<>();
+    static List<Dishes> dishList = new ArrayList<>();
 
     static Dishes dish = new Dishes();
 
+    private static final Integer ID_VALUE = 2;
+
     @BeforeAll
     public static void beforeAll() {
-        dish.setId(2);
+        dish.setId(ID_VALUE);
         dish.setName("Брускетта с форелью(Форель, Сливочный сыр, Багет, Листья салата)");
         dish.setWeight(50L);
         dish.setCost(4L);
