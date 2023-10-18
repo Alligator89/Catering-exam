@@ -742,3 +742,319 @@ java.lang.IllegalArgumentException: The Unicode character [Д] at code point [1,
 2023-10-17T21:41:56.580+03:00  INFO 12780 --- [RMI TCP Connection(3)-192.168.100.2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2023-10-17T21:42:48.107+03:00  INFO 12780 --- [http-nio-8080-exec-1] c.e.c.s.filter.JwtAuthenticationFilter   : Authenticated client with login user
 2023-10-17T21:42:48.219+03:00  INFO 12780 --- [http-nio-8080-exec-1] c.e.c.exceptions.ExceptionResolver       : OrderIsAlreadyPaidException exception!
+2023-10-17T22:19:10.396+03:00  INFO 1752 --- [main] c.e.c.repository.OrdersRepositoryTest    : Starting OrdersRepositoryTest using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:10.398+03:00  INFO 1752 --- [main] c.e.c.repository.OrdersRepositoryTest    : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:10.943+03:00  INFO 1752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-17T22:19:11.035+03:00  INFO 1752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 5 JPA repository interfaces.
+2023-10-17T22:19:11.572+03:00  INFO 1752 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-10-17T22:19:11.573+03:00  INFO 1752 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-10-17T22:19:11.573+03:00  INFO 1752 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-10-17T22:19:11.594+03:00  INFO 1752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-17T22:19:11.892+03:00  INFO 1752 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@20dd5870
+2023-10-17T22:19:11.894+03:00  INFO 1752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-17T22:19:11.915+03:00  INFO 1752 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/Catering (PostgreSQL 15.2)
+2023-10-17T22:19:11.964+03:00  INFO 1752 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.025s)
+2023-10-17T22:19:12.042+03:00  INFO 1752 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 2.1.0
+2023-10-17T22:19:12.043+03:00  INFO 1752 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-10-17T22:19:12.207+03:00  INFO 1752 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-17T22:19:12.310+03:00  INFO 1752 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-17T22:19:12.313+03:00  INFO 1752 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-17T22:19:12.530+03:00  INFO 1752 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-17T22:19:12.551+03:00  INFO 1752 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-17T22:19:12.974+03:00  INFO 1752 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-17T22:19:13.595+03:00  INFO 1752 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-17T22:19:13.600+03:00  INFO 1752 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17T22:19:14.260+03:00  INFO 1752 --- [main] c.e.c.repository.OrdersRepositoryTest    : Started OrdersRepositoryTest in 4.377 seconds (process running for 7.751)
+2023-10-17T22:19:14.663+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.controller.MenuControllerTest]: MenuControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:14.690+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.controller.MenuControllerTest
+2023-10-17T22:19:14.733+03:00  INFO 1752 --- [main] c.e.c.controller.MenuControllerTest      : Starting MenuControllerTest using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:14.734+03:00  INFO 1752 --- [main] c.e.c.controller.MenuControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:15.853+03:00  WARN 1752 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7f273715-5c71-4a81-b060-eef0dda814b0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-17T22:19:16.013+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40a32c25, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@685280dd, org.springframework.security.web.context.SecurityContextHolderFilter@c9ba9e2, org.springframework.security.web.header.HeaderWriterFilter@14f05ca0, org.springframework.security.web.csrf.CsrfFilter@eaa901a, org.springframework.security.web.authentication.logout.LogoutFilter@48ebcce5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@54d8236c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@796267e8, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@56957f08, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3a7abd4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b628249, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@310df168, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b0fc8c2, org.springframework.security.web.access.ExceptionTranslationFilter@1cad8bce, org.springframework.security.web.access.intercept.AuthorizationFilter@5f6e6902]
+2023-10-17T22:19:16.087+03:00  INFO 1752 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-17T22:19:16.088+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-17T22:19:16.090+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-17T22:19:16.111+03:00  INFO 1752 --- [main] c.e.c.controller.MenuControllerTest      : Started MenuControllerTest in 1.41 seconds (process running for 9.602)
+2023-10-17T22:19:16.190+03:00  INFO 1752 --- [main] c.e.catering.controller.MenuController   : Menu is found!
+2023-10-17T22:19:16.287+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.repository.OrderedMenuRepositoryTest]: OrderedMenuRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:16.297+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.repository.OrderedMenuRepositoryTest
+2023-10-17T22:19:16.580+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.controller.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:16.586+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.controller.OrderControllerTest
+2023-10-17T22:19:16.619+03:00  INFO 1752 --- [main] c.e.c.controller.OrderControllerTest     : Starting OrderControllerTest using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:16.620+03:00  INFO 1752 --- [main] c.e.c.controller.OrderControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:16.956+03:00  WARN 1752 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 995213aa-a9dc-431a-b6f3-9248a288879b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-17T22:19:16.963+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@504521ae, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a9e6ea7, org.springframework.security.web.context.SecurityContextHolderFilter@6cf58989, org.springframework.security.web.header.HeaderWriterFilter@2c9573f1, org.springframework.security.web.csrf.CsrfFilter@178826db, org.springframework.security.web.authentication.logout.LogoutFilter@5f04449a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5d4f0fd5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4b954cbb, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6f8af186, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2092b072, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a1dc432, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c18b432, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5aaecd25, org.springframework.security.web.access.ExceptionTranslationFilter@7f913c47, org.springframework.security.web.access.intercept.AuthorizationFilter@37a5ac85]
+2023-10-17T22:19:16.969+03:00  INFO 1752 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-17T22:19:16.970+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-17T22:19:16.971+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-17T22:19:16.977+03:00  INFO 1752 --- [main] c.e.c.controller.OrderControllerTest     : Started OrderControllerTest in 0.386 seconds (process running for 10.467)
+2023-10-17T22:19:17.075+03:00  INFO 1752 --- [main] c.e.catering.controller.OrderController  : Order with id: 2 is created!
+2023-10-17T22:19:17.093+03:00  INFO 1752 --- [main] c.e.catering.controller.OrderController  : Order with id: 10 is found!
+2023-10-17T22:19:17.153+03:00  INFO 1752 --- [main] c.e.catering.controller.OrderController  : Order with id: 10 is deleted!
+2023-10-17T22:19:17.163+03:00  INFO 1752 --- [main] c.e.catering.controller.OrderController  : List of orders is found!
+2023-10-17T22:19:17.192+03:00  INFO 1752 --- [main] c.e.catering.controller.OrderController  : Order with id: 2 is updated!
+2023-10-17T22:19:17.199+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.repository.ClientRepositoryTest]: ClientRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:17.205+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.repository.ClientRepositoryTest
+2023-10-17T22:19:17.345+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.controller.ClientControllerTest]: ClientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:17.352+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.controller.ClientControllerTest
+2023-10-17T22:19:17.376+03:00  INFO 1752 --- [main] c.e.c.controller.ClientControllerTest    : Starting ClientControllerTest using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:17.376+03:00  INFO 1752 --- [main] c.e.c.controller.ClientControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:17.639+03:00  WARN 1752 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 220bb4dc-6276-4acd-a7ba-1c87d1c5bce9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-17T22:19:17.648+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6fefaeba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e9f3b74, org.springframework.security.web.context.SecurityContextHolderFilter@4ab0ebf0, org.springframework.security.web.header.HeaderWriterFilter@5d1acb3a, org.springframework.security.web.csrf.CsrfFilter@130e2aef, org.springframework.security.web.authentication.logout.LogoutFilter@67eb43a0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4353146f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5d7d2cb5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7534b2a4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7e18b9e6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@288be91b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56357e52, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e58f26d, org.springframework.security.web.access.ExceptionTranslationFilter@7ed0020a, org.springframework.security.web.access.intercept.AuthorizationFilter@2e7de98a]
+2023-10-17T22:19:17.656+03:00  INFO 1752 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-17T22:19:17.656+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-17T22:19:17.657+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-17T22:19:17.664+03:00  INFO 1752 --- [main] c.e.c.controller.ClientControllerTest    : Started ClientControllerTest in 0.308 seconds (process running for 11.155)
+2023-10-17T22:19:17.687+03:00  INFO 1752 --- [main] c.e.c.controller.ClientController        : Client with firstname Денис is created!
+2023-10-17T22:19:17.699+03:00  INFO 1752 --- [main] c.e.c.controller.ClientController        : Client with id: 2 is deleted!
+2023-10-17T22:19:17.707+03:00  INFO 1752 --- [main] c.e.c.controller.ClientController        : Client with id: 2 is updated!
+2023-10-17T22:19:17.722+03:00  INFO 1752 --- [main] c.e.c.controller.ClientController        : Client with lastname Любенков is found!
+2023-10-17T22:19:17.735+03:00  INFO 1752 --- [main] c.e.c.controller.ClientController        : Client with id: 2 is found!
+2023-10-17T22:19:17.742+03:00  INFO 1752 --- [main] c.e.c.controller.ClientController        : Clients are found!
+2023-10-17T22:19:17.750+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.repository.DishRepositoryTest]: DishRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:17.756+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.repository.DishRepositoryTest
+2023-10-17T22:19:17.834+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.controller.OrderedMenuControllerTest]: OrderedMenuControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:17.840+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.controller.OrderedMenuControllerTest
+2023-10-17T22:19:17.861+03:00  INFO 1752 --- [main] c.e.c.c.OrderedMenuControllerTest        : Starting OrderedMenuControllerTest using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:17.861+03:00  INFO 1752 --- [main] c.e.c.c.OrderedMenuControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:18.139+03:00  WARN 1752 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b40148f8-a05b-4478-bbfa-1f026132e65b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-17T22:19:18.149+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8d11a2c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63838642, org.springframework.security.web.context.SecurityContextHolderFilter@3a2227e8, org.springframework.security.web.header.HeaderWriterFilter@adeb5a6, org.springframework.security.web.csrf.CsrfFilter@66c935db, org.springframework.security.web.authentication.logout.LogoutFilter@2a801d1e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e5ca5fe, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4148a617, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@28bbac99, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@49e35c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@156aba9a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec457ec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d7e9c4d, org.springframework.security.web.access.ExceptionTranslationFilter@c94f221, org.springframework.security.web.access.intercept.AuthorizationFilter@321b3440]
+2023-10-17T22:19:18.157+03:00  INFO 1752 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-17T22:19:18.157+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-17T22:19:18.158+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-10-17T22:19:18.164+03:00  INFO 1752 --- [main] c.e.c.c.OrderedMenuControllerTest        : Started OrderedMenuControllerTest in 0.32 seconds (process running for 11.656)
+2023-10-17T22:19:18.178+03:00  INFO 1752 --- [main] c.e.c.controller.OrderedMenuController   : OrderedMenu with id: 20 is found!
+2023-10-17T22:19:18.192+03:00  INFO 1752 --- [main] c.e.c.controller.OrderedMenuController   : OrderedMenu with id: 2 is deleted!
+2023-10-17T22:19:18.205+03:00  INFO 1752 --- [main] c.e.c.controller.OrderedMenuController   : OrderedMenu by orders`s id: null is created!
+2023-10-17T22:19:18.214+03:00  INFO 1752 --- [main] c.e.c.controller.OrderedMenuController   : OrderedMenu with id: null is updated!
+2023-10-17T22:19:18.237+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.CateringExamProjectApplicationTests]: CateringExamProjectApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:18.243+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.CateringExamProjectApplicationTests
+2023-10-17T22:19:18.262+03:00  INFO 1752 --- [main] .e.c.CateringExamProjectApplicationTests : Starting CateringExamProjectApplicationTests using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:18.263+03:00  INFO 1752 --- [main] .e.c.CateringExamProjectApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:18.861+03:00  INFO 1752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-17T22:19:18.879+03:00  INFO 1752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 5 JPA repository interfaces.
+2023-10-17T22:19:19.088+03:00  INFO 1752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-10-17T22:19:19.160+03:00  INFO 1752 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@4b28d787
+2023-10-17T22:19:19.161+03:00  INFO 1752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-10-17T22:19:19.163+03:00  INFO 1752 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/Catering (PostgreSQL 15.2)
+2023-10-17T22:19:19.183+03:00  INFO 1752 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.012s)
+2023-10-17T22:19:19.242+03:00  INFO 1752 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 2.1.0
+2023-10-17T22:19:19.244+03:00  INFO 1752 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-10-17T22:19:19.273+03:00  INFO 1752 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-17T22:19:19.283+03:00  INFO 1752 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-17T22:19:19.283+03:00  INFO 1752 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-17T22:19:19.331+03:00  INFO 1752 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-17T22:19:19.436+03:00  INFO 1752 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-17T22:19:19.437+03:00  INFO 1752 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17T22:19:19.753+03:00  WARN 1752 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-17T22:19:19.839+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@25ae0223, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9a82ef, org.springframework.security.web.context.SecurityContextHolderFilter@6d1cc821, org.springframework.security.web.header.HeaderWriterFilter@2d5cb887, org.springframework.security.web.authentication.logout.LogoutFilter@15774e00, com.exam.catering.security.filter.JwtAuthenticationFilter@33260ecd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25cccd85, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77e914a4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@666e1965, org.springframework.security.web.session.SessionManagementFilter@73dc387, org.springframework.security.web.access.ExceptionTranslationFilter@148fc881, org.springframework.security.web.access.intercept.AuthorizationFilter@1f4c8062]
+2023-10-17T22:19:20.390+03:00  WARN 1752 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/v3/api-docs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-10-17T22:19:20.391+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/v3/api-docs/**']
+2023-10-17T22:19:20.391+03:00  WARN 1752 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/swagger-ui/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-10-17T22:19:20.392+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/swagger-ui/**']
+2023-10-17T22:19:20.411+03:00  INFO 1752 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-10-17T22:19:20.490+03:00  INFO 1752 --- [main] .e.c.CateringExamProjectApplicationTests : Started CateringExamProjectApplicationTests in 2.241 seconds (process running for 13.981)
+2023-10-17T22:19:20.642+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.controller.DishesControllerTest]: DishesControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:20.648+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.controller.DishesControllerTest
+2023-10-17T22:19:20.667+03:00  INFO 1752 --- [main] c.e.c.controller.DishesControllerTest    : Starting DishesControllerTest using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:20.668+03:00  INFO 1752 --- [main] c.e.c.controller.DishesControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:20.922+03:00  WARN 1752 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5e1e806c-f9d7-415a-97f7-b5cd60dd8475
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-17T22:19:20.931+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@82300e1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6fa9e6db, org.springframework.security.web.context.SecurityContextHolderFilter@562058d8, org.springframework.security.web.header.HeaderWriterFilter@2d94467b, org.springframework.security.web.csrf.CsrfFilter@1620ca32, org.springframework.security.web.authentication.logout.LogoutFilter@4c4f0443, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@454db313, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@55baa338, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@47d41516, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7194dae5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46416974, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a12819f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1040bcfb, org.springframework.security.web.access.ExceptionTranslationFilter@6b35f9c, org.springframework.security.web.access.intercept.AuthorizationFilter@2bcaa34]
+2023-10-17T22:19:20.936+03:00  INFO 1752 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-17T22:19:20.937+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-17T22:19:20.937+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-10-17T22:19:20.942+03:00  INFO 1752 --- [main] c.e.c.controller.DishesControllerTest    : Started DishesControllerTest in 0.29 seconds (process running for 14.433)
+2023-10-17T22:19:20.951+03:00  INFO 1752 --- [main] c.e.c.controller.DishesController        : List of dishes is found!
+2023-10-17T22:19:20.963+03:00  INFO 1752 --- [main] c.e.c.controller.DishesController        : Dish with id: 2 is found!
+2023-10-17T22:19:20.973+03:00  INFO 1752 --- [main] c.e.c.controller.DishesController        : Dish with id: 2 is deleted!
+2023-10-17T22:19:20.982+03:00  INFO 1752 --- [main] c.e.c.controller.DishesController        : Dish with id: null is updated!
+2023-10-17T22:19:20.988+03:00  INFO 1752 --- [main] c.e.c.controller.DishesController        : Dish with name: Брускетта с форелью(Форель, Сливочный сыр, Багет, Листья салата) is created!
+2023-10-17T22:19:20.996+03:00  INFO 1752 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17T22:19:20.999+03:00  INFO 1752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-17T22:19:21.003+03:00  INFO 1752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-17T22:19:21.016+03:00  INFO 1752 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17T22:19:21.017+03:00  INFO 1752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-10-17T22:19:21.023+03:00  INFO 1752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-10-17T22:19:10.396+03:00  INFO 1752 --- [main] c.e.c.repository.OrdersRepositoryTest    : Starting OrdersRepositoryTest using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:10.398+03:00  INFO 1752 --- [main] c.e.c.repository.OrdersRepositoryTest    : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:10.943+03:00  INFO 1752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-17T22:19:11.035+03:00  INFO 1752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 5 JPA repository interfaces.
+2023-10-17T22:19:11.572+03:00  INFO 1752 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-10-17T22:19:11.573+03:00  INFO 1752 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-10-17T22:19:11.573+03:00  INFO 1752 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-10-17T22:19:11.594+03:00  INFO 1752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-17T22:19:11.892+03:00  INFO 1752 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@20dd5870
+2023-10-17T22:19:11.894+03:00  INFO 1752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-17T22:19:11.915+03:00  INFO 1752 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/Catering (PostgreSQL 15.2)
+2023-10-17T22:19:11.964+03:00  INFO 1752 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.025s)
+2023-10-17T22:19:12.042+03:00  INFO 1752 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 2.1.0
+2023-10-17T22:19:12.043+03:00  INFO 1752 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-10-17T22:19:12.207+03:00  INFO 1752 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-17T22:19:12.310+03:00  INFO 1752 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-17T22:19:12.313+03:00  INFO 1752 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-17T22:19:12.530+03:00  INFO 1752 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-17T22:19:12.551+03:00  INFO 1752 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-17T22:19:12.974+03:00  INFO 1752 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-17T22:19:13.595+03:00  INFO 1752 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-17T22:19:13.600+03:00  INFO 1752 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17T22:19:14.260+03:00  INFO 1752 --- [main] c.e.c.repository.OrdersRepositoryTest    : Started OrdersRepositoryTest in 4.377 seconds (process running for 7.751)
+2023-10-17T22:19:14.663+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.controller.MenuControllerTest]: MenuControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:14.690+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.controller.MenuControllerTest
+2023-10-17T22:19:14.733+03:00  INFO 1752 --- [main] c.e.c.controller.MenuControllerTest      : Starting MenuControllerTest using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:14.734+03:00  INFO 1752 --- [main] c.e.c.controller.MenuControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:15.853+03:00  WARN 1752 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7f273715-5c71-4a81-b060-eef0dda814b0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-17T22:19:16.013+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40a32c25, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@685280dd, org.springframework.security.web.context.SecurityContextHolderFilter@c9ba9e2, org.springframework.security.web.header.HeaderWriterFilter@14f05ca0, org.springframework.security.web.csrf.CsrfFilter@eaa901a, org.springframework.security.web.authentication.logout.LogoutFilter@48ebcce5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@54d8236c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@796267e8, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@56957f08, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3a7abd4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b628249, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@310df168, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b0fc8c2, org.springframework.security.web.access.ExceptionTranslationFilter@1cad8bce, org.springframework.security.web.access.intercept.AuthorizationFilter@5f6e6902]
+2023-10-17T22:19:16.087+03:00  INFO 1752 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-17T22:19:16.088+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-17T22:19:16.090+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-17T22:19:16.111+03:00  INFO 1752 --- [main] c.e.c.controller.MenuControllerTest      : Started MenuControllerTest in 1.41 seconds (process running for 9.602)
+2023-10-17T22:19:16.190+03:00  INFO 1752 --- [main] c.e.catering.controller.MenuController   : Menu is found!
+2023-10-17T22:19:16.287+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.repository.OrderedMenuRepositoryTest]: OrderedMenuRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:16.297+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.repository.OrderedMenuRepositoryTest
+2023-10-17T22:19:16.580+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.controller.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:16.586+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.controller.OrderControllerTest
+2023-10-17T22:19:16.619+03:00  INFO 1752 --- [main] c.e.c.controller.OrderControllerTest     : Starting OrderControllerTest using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:16.620+03:00  INFO 1752 --- [main] c.e.c.controller.OrderControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:16.956+03:00  WARN 1752 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 995213aa-a9dc-431a-b6f3-9248a288879b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-17T22:19:16.963+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@504521ae, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a9e6ea7, org.springframework.security.web.context.SecurityContextHolderFilter@6cf58989, org.springframework.security.web.header.HeaderWriterFilter@2c9573f1, org.springframework.security.web.csrf.CsrfFilter@178826db, org.springframework.security.web.authentication.logout.LogoutFilter@5f04449a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5d4f0fd5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4b954cbb, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6f8af186, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2092b072, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a1dc432, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c18b432, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5aaecd25, org.springframework.security.web.access.ExceptionTranslationFilter@7f913c47, org.springframework.security.web.access.intercept.AuthorizationFilter@37a5ac85]
+2023-10-17T22:19:16.969+03:00  INFO 1752 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-17T22:19:16.970+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-17T22:19:16.971+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-17T22:19:16.977+03:00  INFO 1752 --- [main] c.e.c.controller.OrderControllerTest     : Started OrderControllerTest in 0.386 seconds (process running for 10.467)
+2023-10-17T22:19:17.075+03:00  INFO 1752 --- [main] c.e.catering.controller.OrderController  : Order with id: 2 is created!
+2023-10-17T22:19:17.093+03:00  INFO 1752 --- [main] c.e.catering.controller.OrderController  : Order with id: 10 is found!
+2023-10-17T22:19:17.153+03:00  INFO 1752 --- [main] c.e.catering.controller.OrderController  : Order with id: 10 is deleted!
+2023-10-17T22:19:17.163+03:00  INFO 1752 --- [main] c.e.catering.controller.OrderController  : List of orders is found!
+2023-10-17T22:19:17.192+03:00  INFO 1752 --- [main] c.e.catering.controller.OrderController  : Order with id: 2 is updated!
+2023-10-17T22:19:17.199+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.repository.ClientRepositoryTest]: ClientRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:17.205+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.repository.ClientRepositoryTest
+2023-10-17T22:19:17.345+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.controller.ClientControllerTest]: ClientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:17.352+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.controller.ClientControllerTest
+2023-10-17T22:19:17.376+03:00  INFO 1752 --- [main] c.e.c.controller.ClientControllerTest    : Starting ClientControllerTest using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:17.376+03:00  INFO 1752 --- [main] c.e.c.controller.ClientControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:17.639+03:00  WARN 1752 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 220bb4dc-6276-4acd-a7ba-1c87d1c5bce9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-17T22:19:17.648+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6fefaeba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e9f3b74, org.springframework.security.web.context.SecurityContextHolderFilter@4ab0ebf0, org.springframework.security.web.header.HeaderWriterFilter@5d1acb3a, org.springframework.security.web.csrf.CsrfFilter@130e2aef, org.springframework.security.web.authentication.logout.LogoutFilter@67eb43a0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4353146f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5d7d2cb5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7534b2a4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7e18b9e6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@288be91b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56357e52, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e58f26d, org.springframework.security.web.access.ExceptionTranslationFilter@7ed0020a, org.springframework.security.web.access.intercept.AuthorizationFilter@2e7de98a]
+2023-10-17T22:19:17.656+03:00  INFO 1752 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-17T22:19:17.656+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-17T22:19:17.657+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-17T22:19:17.664+03:00  INFO 1752 --- [main] c.e.c.controller.ClientControllerTest    : Started ClientControllerTest in 0.308 seconds (process running for 11.155)
+2023-10-17T22:19:17.687+03:00  INFO 1752 --- [main] c.e.c.controller.ClientController        : Client with firstname Денис is created!
+2023-10-17T22:19:17.699+03:00  INFO 1752 --- [main] c.e.c.controller.ClientController        : Client with id: 2 is deleted!
+2023-10-17T22:19:17.707+03:00  INFO 1752 --- [main] c.e.c.controller.ClientController        : Client with id: 2 is updated!
+2023-10-17T22:19:17.722+03:00  INFO 1752 --- [main] c.e.c.controller.ClientController        : Client with lastname Любенков is found!
+2023-10-17T22:19:17.735+03:00  INFO 1752 --- [main] c.e.c.controller.ClientController        : Client with id: 2 is found!
+2023-10-17T22:19:17.742+03:00  INFO 1752 --- [main] c.e.c.controller.ClientController        : Clients are found!
+2023-10-17T22:19:17.750+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.repository.DishRepositoryTest]: DishRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:17.756+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.repository.DishRepositoryTest
+2023-10-17T22:19:17.834+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.controller.OrderedMenuControllerTest]: OrderedMenuControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:17.840+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.controller.OrderedMenuControllerTest
+2023-10-17T22:19:17.861+03:00  INFO 1752 --- [main] c.e.c.c.OrderedMenuControllerTest        : Starting OrderedMenuControllerTest using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:17.861+03:00  INFO 1752 --- [main] c.e.c.c.OrderedMenuControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:18.139+03:00  WARN 1752 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b40148f8-a05b-4478-bbfa-1f026132e65b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-17T22:19:18.149+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8d11a2c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63838642, org.springframework.security.web.context.SecurityContextHolderFilter@3a2227e8, org.springframework.security.web.header.HeaderWriterFilter@adeb5a6, org.springframework.security.web.csrf.CsrfFilter@66c935db, org.springframework.security.web.authentication.logout.LogoutFilter@2a801d1e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e5ca5fe, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4148a617, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@28bbac99, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@49e35c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@156aba9a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec457ec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d7e9c4d, org.springframework.security.web.access.ExceptionTranslationFilter@c94f221, org.springframework.security.web.access.intercept.AuthorizationFilter@321b3440]
+2023-10-17T22:19:18.157+03:00  INFO 1752 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-17T22:19:18.157+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-17T22:19:18.158+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-10-17T22:19:18.164+03:00  INFO 1752 --- [main] c.e.c.c.OrderedMenuControllerTest        : Started OrderedMenuControllerTest in 0.32 seconds (process running for 11.656)
+2023-10-17T22:19:18.178+03:00  INFO 1752 --- [main] c.e.c.controller.OrderedMenuController   : OrderedMenu with id: 20 is found!
+2023-10-17T22:19:18.192+03:00  INFO 1752 --- [main] c.e.c.controller.OrderedMenuController   : OrderedMenu with id: 2 is deleted!
+2023-10-17T22:19:18.205+03:00  INFO 1752 --- [main] c.e.c.controller.OrderedMenuController   : OrderedMenu by orders`s id: null is created!
+2023-10-17T22:19:18.214+03:00  INFO 1752 --- [main] c.e.c.controller.OrderedMenuController   : OrderedMenu with id: null is updated!
+2023-10-17T22:19:18.237+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.CateringExamProjectApplicationTests]: CateringExamProjectApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:18.243+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.CateringExamProjectApplicationTests
+2023-10-17T22:19:18.262+03:00  INFO 1752 --- [main] .e.c.CateringExamProjectApplicationTests : Starting CateringExamProjectApplicationTests using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:18.263+03:00  INFO 1752 --- [main] .e.c.CateringExamProjectApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:18.861+03:00  INFO 1752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-17T22:19:18.879+03:00  INFO 1752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 5 JPA repository interfaces.
+2023-10-17T22:19:19.088+03:00  INFO 1752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-10-17T22:19:19.160+03:00  INFO 1752 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@4b28d787
+2023-10-17T22:19:19.161+03:00  INFO 1752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-10-17T22:19:19.163+03:00  INFO 1752 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/Catering (PostgreSQL 15.2)
+2023-10-17T22:19:19.183+03:00  INFO 1752 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.012s)
+2023-10-17T22:19:19.242+03:00  INFO 1752 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 2.1.0
+2023-10-17T22:19:19.244+03:00  INFO 1752 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-10-17T22:19:19.273+03:00  INFO 1752 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-17T22:19:19.283+03:00  INFO 1752 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-17T22:19:19.283+03:00  INFO 1752 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-17T22:19:19.331+03:00  INFO 1752 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-17T22:19:19.436+03:00  INFO 1752 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-17T22:19:19.437+03:00  INFO 1752 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17T22:19:19.753+03:00  WARN 1752 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-17T22:19:19.839+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@25ae0223, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9a82ef, org.springframework.security.web.context.SecurityContextHolderFilter@6d1cc821, org.springframework.security.web.header.HeaderWriterFilter@2d5cb887, org.springframework.security.web.authentication.logout.LogoutFilter@15774e00, com.exam.catering.security.filter.JwtAuthenticationFilter@33260ecd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25cccd85, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77e914a4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@666e1965, org.springframework.security.web.session.SessionManagementFilter@73dc387, org.springframework.security.web.access.ExceptionTranslationFilter@148fc881, org.springframework.security.web.access.intercept.AuthorizationFilter@1f4c8062]
+2023-10-17T22:19:20.390+03:00  WARN 1752 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/v3/api-docs/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-10-17T22:19:20.391+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/v3/api-docs/**']
+2023-10-17T22:19:20.391+03:00  WARN 1752 --- [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/swagger-ui/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-10-17T22:19:20.392+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/swagger-ui/**']
+2023-10-17T22:19:20.411+03:00  INFO 1752 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoint(s) beneath base path '/actuator'
+2023-10-17T22:19:20.490+03:00  INFO 1752 --- [main] .e.c.CateringExamProjectApplicationTests : Started CateringExamProjectApplicationTests in 2.241 seconds (process running for 13.981)
+2023-10-17T22:19:20.642+03:00  INFO 1752 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exam.catering.controller.DishesControllerTest]: DishesControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-17T22:19:20.648+03:00  INFO 1752 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exam.catering.CateringExamProjectApplication for test class com.exam.catering.controller.DishesControllerTest
+2023-10-17T22:19:20.667+03:00  INFO 1752 --- [main] c.e.c.controller.DishesControllerTest    : Starting DishesControllerTest using Java 17.0.8 with PID 1752 (started by User in D:\Программы\My first project\Catering exam project)
+2023-10-17T22:19:20.668+03:00  INFO 1752 --- [main] c.e.c.controller.DishesControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-10-17T22:19:20.922+03:00  WARN 1752 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5e1e806c-f9d7-415a-97f7-b5cd60dd8475
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-17T22:19:20.931+03:00  INFO 1752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@82300e1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6fa9e6db, org.springframework.security.web.context.SecurityContextHolderFilter@562058d8, org.springframework.security.web.header.HeaderWriterFilter@2d94467b, org.springframework.security.web.csrf.CsrfFilter@1620ca32, org.springframework.security.web.authentication.logout.LogoutFilter@4c4f0443, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@454db313, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@55baa338, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@47d41516, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7194dae5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46416974, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a12819f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1040bcfb, org.springframework.security.web.access.ExceptionTranslationFilter@6b35f9c, org.springframework.security.web.access.intercept.AuthorizationFilter@2bcaa34]
+2023-10-17T22:19:20.936+03:00  INFO 1752 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-17T22:19:20.937+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-17T22:19:20.937+03:00  INFO 1752 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-10-17T22:19:20.942+03:00  INFO 1752 --- [main] c.e.c.controller.DishesControllerTest    : Started DishesControllerTest in 0.29 seconds (process running for 14.433)
+2023-10-17T22:19:20.951+03:00  INFO 1752 --- [main] c.e.c.controller.DishesController        : List of dishes is found!
+2023-10-17T22:19:20.963+03:00  INFO 1752 --- [main] c.e.c.controller.DishesController        : Dish with id: 2 is found!
+2023-10-17T22:19:20.973+03:00  INFO 1752 --- [main] c.e.c.controller.DishesController        : Dish with id: 2 is deleted!
+2023-10-17T22:19:20.982+03:00  INFO 1752 --- [main] c.e.c.controller.DishesController        : Dish with id: null is updated!
+2023-10-17T22:19:20.988+03:00  INFO 1752 --- [main] c.e.c.controller.DishesController        : Dish with name: Брускетта с форелью(Форель, Сливочный сыр, Багет, Листья салата) is created!
+2023-10-17T22:19:20.996+03:00  INFO 1752 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17T22:19:20.999+03:00  INFO 1752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-17T22:19:21.003+03:00  INFO 1752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-17T22:19:21.016+03:00  INFO 1752 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-17T22:19:21.017+03:00  INFO 1752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-10-17T22:19:21.023+03:00  INFO 1752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
